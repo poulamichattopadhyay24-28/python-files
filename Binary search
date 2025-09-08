@@ -1,0 +1,28 @@
+# Binary Search in Python
+
+n = int(input("Enter number of elements: "))
+arr = []
+
+print("Enter elements in sorted order:")
+for i in range(n):
+    arr.append(int(input()))
+
+key = int(input("Enter element to search: "))
+
+low, high = 0, n - 1
+found = False
+
+while low <= high:
+    mid = (low + high) // 2
+
+    if arr[mid] == key:
+        print(f"Element {key} found at position {mid+1}")
+        found = True
+        break
+    elif arr[mid] < key:
+        low = mid + 1
+    else:
+        high = mid - 1
+
+if not found:
+    print(f"Element {key} not found in the array.")
