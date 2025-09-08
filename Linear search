@@ -1,0 +1,23 @@
+# Linear Search in Python
+
+
+n = int(input("Enter number of elements: "))
+arr = []
+
+print("Enter the elements:")
+for i in range(n):
+    arr.append(int(input()))
+
+# Element to search
+key = int(input("Enter element to search: "))
+
+# Linear search
+found = False
+for i in range(n):
+    if arr[i] == key:
+        print(f"Element {key} found at position {i+1}")
+        found = True
+        break
+
+if not found:
+    print(f"Element {key} not found in the array.")
